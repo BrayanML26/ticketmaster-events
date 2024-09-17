@@ -26,6 +26,10 @@
     font-weight: 700;
 }
 
+    .page :hover {
+        color: #ccc;
+    }
+
 .activePage {
     background-color: black;
     color: #fff;

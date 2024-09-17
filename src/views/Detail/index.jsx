@@ -6,7 +6,6 @@ import { es } from "date-fns/locale";
 
 const Detail = () => {
     const { eventId } = useParams();
-
     const [eventData, setEvenData] = useState({});
     const [error, setError] = useState({});
     const [isLoading, setIsLoading] = useState(true);
@@ -37,19 +36,26 @@ const Detail = () => {
         return <div>Ha ocurrido un error...</div>
     }
 
-    console.log(eventData);
     return (
         <div className={styles.container}>
             <div className={styles.mainInfoContainer}>
-                <img src={eventData.images?.[0].url} />
-                <h4>{eventData.name}</h4>
-                <p>{eventData.info}</p>
-                <p> {eventData?.dates?.start?.dateTime && !isNaN(new Date(eventData.dates.start.dateTime).getTime()) 
-                    ? format(new Date(eventData.dates.start.dateTime), 'd LLLL yyyy H:mm', { locale: es })
-                    : 'Fecha no disponible'}hrs
-                </p>
-
+                <img src={eventData.images?.[0].url} className={styles.eventImage} alt={eventData.name} />
+                <h4 className={styles.eventName}>{eventData.name}</h4>
+                <p className={styles.infoParagraph}>{eventData.info}</p>
+                {eventData.dates?.start.dateTime 
+                    ? <p className={styles.dateParagraph}>{format(new Date(eventData.dates.start.dateTime), 'd LLLL yyyy H:mm', { locale: es })}hrs</p>
+                    : null 
+                }
             </div>
+            <div className={styles.seatInfoContainer}>
+                <h6 className={styles.seatMapTitle}>Mapa del evento</h6>
+                <img src={eventData.seatmap?.staticUrl} alt="Seatmap event" />
+                <p className={styles.pleaseNoteLegend}>{eventData.pleaseNote}</p>
+                <p className={styles.priceRangeLegend}>Rango de precios: {eventData.priceRanges?.[0].min}-{eventData.priceRanges?.[0].max} {eventData.priceRanges?.[0].currency}</p>
+            </div>
+            <a href={eventData.url} style={{ fontSize: 16 }}>
+                Ir por tus boletos
+            </a>
         </div>
     );
 }

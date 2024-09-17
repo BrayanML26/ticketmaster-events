@@ -35,7 +35,7 @@ const Navbar = forwardRef(({ onSearch }, ref) => {
                     onChange={handleInputChange}
                     onKeyDown={handleInputKeyDown}
                     value={search}
-                    style={{ fontSize: 16, padding: '6px 12px', borderRadius: 12, width: 200, border: 'none' }}
+                    style={{ fontSize: 14, padding: '6px 12px', borderRadius: 12, width: 200 }}
                 />
             </div>
         </div>
