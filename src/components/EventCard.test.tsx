@@ -85,7 +85,7 @@ describe('EventCard', () => {
             />
         )
 
-        const detailsLink = screen.getByRole('link', { name: /ver detalles/i })
+        const detailsLink = screen.getByRole('link', { name: /view details/i })
         expect(detailsLink).toHaveAttribute('href', '/detail/test-event-1')
     })
 })
