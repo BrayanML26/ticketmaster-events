@@ -12,9 +12,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico'],
       manifest: {
-        name: 'EventosYa - Descubre Eventos',
-        short_name: 'EventosYa',
-        description: 'Descubre los mejores eventos de música, deportes, teatro y más en tu ciudad',
+        name: 'Scenry - Discover Live Experiences',
+        short_name: 'Scenry',
+        description: 'Discover the best music, sports, arts, and family events in your city with Scenry',
         theme_color: '#7C3AED',
         background_color: '#ffffff',
         display: 'standalone',

@@ -32,10 +32,10 @@ const Favorites = () => {
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-gray-100 dark:border-gray-800 pb-10">
                     <div className="space-y-2">
                         <span className="inline-block py-1 px-3 rounded-lg bg-red-500/10 text-red-500 text-[10px] font-black tracking-widest uppercase mb-2">
-                            Tu Selección Personal
+                            Your Personal Selection
                         </span>
-                        <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900 dark:text-white">Mis Favoritos</h2>
-                        <p className="text-gray-500 dark:text-gray-400 font-bold text-lg">Eventos que no te quieres perder por nada del mundo.</p>
+                        <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900 dark:text-white">My Favorites</h2>
+                        <p className="text-gray-500 dark:text-gray-400 font-bold text-lg">Events you don't want to miss for the world.</p>
                     </div>
                     <div className="flex items-center gap-4 bg-gray-50 dark:bg-gray-800 p-4 rounded-3xl border border-gray-100 dark:border-gray-700">
                         <div className="w-12 h-12 rounded-2xl bg-white dark:bg-card-dark shadow-sm flex items-center justify-center text-red-500">
@@ -43,7 +43,7 @@ const Favorites = () => {
                         </div>
                         <div>
                             <p className="text-2xl font-black text-gray-900 dark:text-white leading-none">{favorites.length}</p>
-                            <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mt-1">Guardados</p>
+                            <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mt-1">Saved</p>
                         </div>
                     </div>
                 </div>
@@ -54,16 +54,16 @@ const Favorites = () => {
                             <Heart className="w-16 h-16 text-gray-200 dark:text-gray-700 group-hover:scale-110 transition-transform duration-500" />
                         </div>
                         <div className="space-y-3">
-                            <h3 className="text-gray-900 dark:text-white font-black text-3xl tracking-tight">Tu lista está vacía</h3>
+                            <h3 className="text-gray-900 dark:text-white font-black text-3xl tracking-tight">Your list is empty</h3>
                             <p className="text-gray-400 dark:text-gray-500 font-bold text-lg leading-relaxed">
-                                Explora los mejores eventos en tu ciudad y guárdalos aquí para tenerlos siempre a mano. ¡Tu próxima gran experiencia comienza ahora!
+                                Explore the best events in your city and save them here to keep them handy. Your next great experience starts now!
                             </p>
                         </div>
                         <button
                             onClick={() => navigate('/')}
                             className="btn-primary px-12 !py-4 shadow-xl shadow-primary/20"
                         >
-                            Explorar eventos
+                            Explore events
                         </button>
                     </div>
                 ) : isLoading ? (
@@ -129,9 +129,9 @@ const Favorites = () => {
                         <span className="material-icons text-4xl">security</span>
                     </div>
                     <div className="space-y-2 text-center md:text-left">
-                        <h4 className="text-lg font-black text-gray-900 dark:text-white uppercase tracking-wider">Tu privacidad es lo primero</h4>
+                        <h4 className="text-lg font-black text-gray-900 dark:text-white uppercase tracking-wider">Your privacy comes first</h4>
                         <p className="text-gray-500 dark:text-gray-400 font-bold text-sm leading-relaxed max-w-2xl">
-                            Esta lista se guarda exclusivamente en tu navegador de forma local. No compartimos tus gustos con terceros y tus favoritos viajarán contigo mientras no borres los datos del sitio.
+                            This list is saved exclusively locally in your browser. We do not share your preferences with third parties, and your favorites will stay with you as long as you don't clear your site data.
                         </p>
                     </div>
                 </div>

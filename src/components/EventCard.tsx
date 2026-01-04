@@ -15,8 +15,7 @@ export const EventCard: React.FC<EventCardProps> = ({ event, isLiked, onToggleLi
 
     // Format Date for badge
     const dateObj = new Date(event.dates.start.localDate);
-    const months = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
-    const monthNamesFull = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+    const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
     const month = months[dateObj.getMonth()];
     const day = dateObj.getDate();
 
@@ -41,7 +40,7 @@ export const EventCard: React.FC<EventCardProps> = ({ event, isLiked, onToggleLi
                 {/* Category Sticker - Vibrant Purple */}
                 <div className="absolute top-4 left-4">
                     <span className="bg-[#7C3AED] text-white text-[10px] font-black px-3 py-1.5 rounded-lg shadow-lg uppercase tracking-wider backdrop-blur-sm">
-                        {event.classifications?.[0]?.segment?.name || 'Evento'}
+                        {event.classifications?.[0]?.segment?.name || 'Event'}
                     </span>
                 </div>
 
@@ -75,14 +74,14 @@ export const EventCard: React.FC<EventCardProps> = ({ event, isLiked, onToggleLi
 
                 <div className="mt-auto pt-5 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between">
                     <div className="flex flex-col">
-                        <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Desde</span>
+                        <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">From</span>
                         <span className="text-base font-black text-gray-900 dark:text-white">$1,500</span>
                     </div>
                     <Link
                         to={`/detail/${event.id}`}
                         className="inline-flex items-center text-sm font-black text-primary hover:text-violet-700 transition-all group/link"
                     >
-                        Ver Detalles
+                        View Details
                         <span className="material-icons text-sm ml-1.5 transform group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
                     </Link>
                 </div>

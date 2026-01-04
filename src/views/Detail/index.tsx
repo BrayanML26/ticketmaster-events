@@ -3,7 +3,7 @@ import { useEventDetailQuery, useEventsQuery } from '../../hooks/useEventsQuery'
 import { useUIStore } from '../../state/useUIStore';
 import { Heart, ChevronLeft } from 'lucide-react';
 import { format } from 'date-fns';
-import { es } from 'date-fns/locale';
+import { enUS } from 'date-fns/locale';
 import { EventCard } from '../../components/EventCard';
 
 const Detail = () => {
@@ -29,8 +29,8 @@ const Detail = () => {
 
     if (isError || !event) return (
         <div className="max-w-7xl mx-auto px-4 py-20 text-center space-y-4">
-            <h1 className="text-2xl font-bold">Ups! No pudimos encontrar el evento.</h1>
-            <button onClick={() => navigate('/')} className="btn-primary mx-auto">Volver al inicio</button>
+            <h1 className="text-2xl font-bold">Oops! We couldn't find the event.</h1>
+            <button onClick={() => navigate('/')} className="btn-primary mx-auto">Back to home</button>
         </div>
     );
 
@@ -47,7 +47,7 @@ const Detail = () => {
                     onClick={() => navigate(-1)}
                     className="inline-flex items-center text-sm font-black text-gray-400 hover:text-primary transition-colors uppercase tracking-widest"
                 >
-                    <ChevronLeft className="w-5 h-5 mr-1" /> Volver
+                    <ChevronLeft className="w-5 h-5 mr-1" /> Back
                 </button>
             </div>
 
@@ -78,7 +78,7 @@ const Detail = () => {
                                 <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700">
                                     <span className="material-icons text-primary text-base">event</span>
                                     <span className="text-sm font-bold text-gray-600 dark:text-gray-300">
-                                        {format(date, "EEEE d 'de' MMMM", { locale: es })}
+                                        {format(date, "EEEE d MMMM", { locale: enUS })}
                                     </span>
                                 </div>
                                 <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700">
@@ -90,7 +90,7 @@ const Detail = () => {
                             </div>
                             <div className="prose dark:prose-invert max-w-none">
                                 <p className="text-lg text-gray-600 dark:text-gray-400 font-medium leading-relaxed">
-                                    {event.info || event.pleaseNote || "Disfruta de una experiencia única e inolvidable con este increíble evento en tu ciudad. No te pierdas la oportunidad de ser parte de este momento especial."}
+                                    {event.info || event.pleaseNote || "Enjoy a unique and unforgettable experience with this amazing event in your city. Don't miss the opportunity to be part of this special moment."}
                                 </p>
                             </div>
                         </div>
@@ -100,7 +100,7 @@ const Detail = () => {
                     <div className="lg:col-span-4">
                         <div className="sticky top-28 bg-gray-50 dark:bg-card-dark rounded-[32px] p-8 border border-gray-100 dark:border-gray-800 shadow-xl space-y-8">
                             <div className="space-y-2">
-                                <p className="text-xs font-black text-gray-400 uppercase tracking-widest">Precio de entrada</p>
+                                <p className="text-xs font-black text-gray-400 uppercase tracking-widest">Ticket Price</p>
                                 <div className="flex items-baseline gap-2">
                                     <span className="text-4xl font-black text-gray-900 dark:text-white">$1,500</span>
                                     <span className="text-gray-500 font-bold">MXN</span>
@@ -108,7 +108,7 @@ const Detail = () => {
                             </div>
 
                             <button className="w-full btn-primary !py-5 !text-base shadow-xl shadow-primary/30">
-                                Reservar Entradas
+                                Book Tickets
                             </button>
 
                             <div className="space-y-4 pt-6 border-t border-gray-200 dark:border-gray-700">
@@ -116,13 +116,13 @@ const Detail = () => {
                                     <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
                                         <span className="material-icons">verified</span>
                                     </div>
-                                    <p className="text-sm font-bold text-gray-600 dark:text-gray-400">Entradas 100% oficiales</p>
+                                    <p className="text-sm font-bold text-gray-600 dark:text-gray-400">100% Official Tickets</p>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="w-10 h-10 rounded-xl bg-green-500/10 flex items-center justify-center text-green-500">
                                         <span className="material-icons">confirmation_number</span>
                                     </div>
-                                    <p className="text-sm font-bold text-gray-600 dark:text-gray-400">Confirmación inmediata</p>
+                                    <p className="text-sm font-bold text-gray-600 dark:text-gray-400">Instant Confirmation</p>
                                 </div>
                             </div>
                         </div>
@@ -134,8 +134,8 @@ const Detail = () => {
                     <section className="space-y-8 pt-16 border-t border-gray-100 dark:border-gray-800">
                         <div className="flex items-end justify-between">
                             <div className="space-y-1">
-                                <h2 className="text-3xl font-black text-gray-900 dark:text-white tracking-tight">También te podría interesar</h2>
-                                <p className="text-gray-500 font-medium">Eventos similares que podrían encantarte.</p>
+                                <h2 className="text-3xl font-black text-gray-900 dark:text-white tracking-tight">You might also like</h2>
+                                <p className="text-gray-500 font-medium">Similar events you might love.</p>
                             </div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -11,8 +11,8 @@ export const Navbar = () => {
     };
 
     const navLinks = [
-        { to: '/', label: 'Inicio' },
-        { to: '/favorites', label: 'Favoritos' },
+        { to: '/', label: 'Home' },
+        { to: '/favorites', label: 'Favorites' },
     ];
 
     return (
@@ -22,7 +22,7 @@ export const Navbar = () => {
                     {/* Logo */}
                     <div className="flex items-center">
                         <Link to="/" className="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-[#7C3AED] to-[#C026D3] cursor-pointer tracking-tighter">
-                            EventosYa
+                            Scenry
                         </Link>
                     </div>
 
@@ -74,8 +74,8 @@ export const Navbar = () => {
                                     to={link.to}
                                     onClick={() => setMobileMenuOpen(false)}
                                     className={`px-4 py-3 rounded-xl text-sm font-black uppercase tracking-widest transition-all ${pathname === link.to
-                                            ? 'bg-[#7C3AED] text-white'
-                                            : 'text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800'
+                                        ? 'bg-[#7C3AED] text-white'
+                                        : 'text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800'
                                         }`}
                                 >
                                     {link.label}

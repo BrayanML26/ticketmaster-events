@@ -1,4 +1,4 @@
-# EventosYa 🎉
+# Scenry 🎉
 
 [![CI/CD Pipeline](https://github.com/BrayanML26/ticketmaster-events/actions/workflows/ci.yml/badge.svg)](https://github.com/BrayanML26/ticketmaster-events/actions/workflows/ci.yml)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue.svg)](https://www.typescriptlang.org/)
@@ -6,132 +6,132 @@
 [![Vite](https://img.shields.io/badge/Vite-5.4-646cff.svg)](https://vitejs.dev/)
 [![Tests](https://img.shields.io/badge/Tests-Passing-success.svg)](https://github.com/BrayanML26/ticketmaster-events)
 
-> Descubre los mejores eventos de música, deportes, teatro y más en tu ciudad
+> Discover live experiences. Explore what's happening around you.
 
-EventosYa es una aplicación web moderna y profesional para descubrir eventos en tiempo real usando la API de Ticketmaster. Construida con las últimas tecnologías y mejores prácticas de desarrollo.
+**Scenry** is a modern, professional web application for discovering live events in real-time using the Ticketmaster API. Built with the latest technologies and development best practices.
 
-## ✨ Características
+## ✨ Features
 
-### 🎯 Funcionalidades Core
-- **Búsqueda Avanzada**: Filtra eventos por categoría, ubicación y fecha
-- **Favoritos Persistentes**: Guarda tus eventos favoritos localmente
-- **Vista de Detalles**: Información completa de cada evento
-- **Eventos Relacionados**: Sugerencias basadas en categorías
-- **Paginación Infinita**: Carga más eventos sin recargar la página
+### 🎯 Core Functionality
+- **Advanced Search**: Filter events by category, location, and date
+- **Persistent Favorites**: Save your favorite events locally
+- **Detail View**: Comprehensive information for every event
+- **Related Events**: Smart suggestions based on categories
+- **Infinite Pagination**: Seamlessly load more events without page reloads
 
-### 🚀 Características Técnicas Avanzadas
-- **Progressive Web App (PWA)**: Instalable y funciona offline
-- **Skeleton Loaders**: Mejor percepción de rendimiento
-- **Dark Mode**: Soporte completo para modo oscuro
-- **Responsive Design**: Optimizado para móviles, tablets y desktop
-- **Testing Completo**: Tests unitarios con Vitest
-- **CI/CD**: Pipeline automatizado con GitHub Actions
+### 🚀 Advanced Technical Features
+- **Progressive Web App (PWA)**: Installable and offline-capable
+- **Skeleton Loaders**: Enhanced perceived performance
+- **Dark Mode**: Full support for dark theme
+- **Responsive Design**: Optimized for mobile, tablet, and desktop
+- **Comprehensive Testing**: Unit tests with Vitest
+- **CI/CD**: Automated pipeline with GitHub Actions
 
-## 🛠️ Stack Tecnológico
+## 🛠️ Tech Stack
 
 ### Frontend
-- **React 18** - Biblioteca UI con hooks modernos
-- **TypeScript** - Tipado estático para mayor confiabilidad
-- **Vite** - Build tool ultra-rápido
+- **React 18** - UI library with modern hooks
+- **TypeScript** - Static typing for reliability
+- **Vite** - Lightning-fast build tool
 - **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Animaciones fluidas
+- **Framer Motion** - Fluid animations
 
-### Estado y Data Fetching
+### State & Data Fetching
 - **TanStack Query (React Query) v5** - Server state management
 - **Zustand** - Client state management
-- **React Router v6** - Navegación declarativa
+- **React Router v6** - Declarative navigation
 
 ### Testing
-- **Vitest** - Test runner ultra-rápido
-- **React Testing Library** - Testing de componentes
-- **jsdom** - DOM environment para tests
+- **Vitest** - Blazing fast test runner
+- **React Testing Library** - Component testing utils
+- **jsdom** - DOM environment for tests
 
 ### PWA
-- **vite-plugin-pwa** - Service Worker y manifest
-- **Workbox** - Estrategias de caché inteligentes
+- **vite-plugin-pwa** - Service Worker and manifest generation
+- **Workbox** - Intelligent caching strategies
 
 ### DevOps
-- **GitHub Actions** - CI/CD automatizado
-- **ESLint** - Linting de código
+- **GitHub Actions** - Automated CI/CD
+- **ESLint** - Code linting
 - **TypeScript Compiler** - Type checking
 
-## 📦 Instalación
+## 📦 Installation
 
 ```bash
-# Clonar el repositorio
+# Clone the repository
 git clone https://github.com/BrayanML26/ticketmaster-events.git
 
-# Instalar dependencias
+# Install dependencies
 cd ticketmaster-events
 npm install
 
-# Configurar variables de entorno
+# Configure environment variables
 cp .env.example .env
-# Editar .env y agregar tu VITE_API_KEY de Ticketmaster
+# Edit .env and add your Ticketmaster VITE_API_KEY
 
-# Iniciar servidor de desarrollo
+# Start development server
 npm run dev
 ```
 
-## 🔑 Variables de Entorno
+## 🔑 Environment Variables
 
 ```env
-VITE_API_KEY=tu_api_key_de_ticketmaster
+VITE_API_KEY=your_ticketmaster_api_key
 VITE_COUNTRY_CODE=MX
 ```
 
-Obtén tu API key en: [Ticketmaster Developer Portal](https://developer.ticketmaster.com/)
+Get your API key at: [Ticketmaster Developer Portal](https://developer.ticketmaster.com/)
 
 ## 🧪 Testing
 
 ```bash
-# Ejecutar tests
+# Run tests
 npm test
 
-# Tests con UI
+# Run tests with UI
 npm run test:ui
 
-# Coverage report
+# Generate coverage report
 npm run test:coverage
 ```
 
 ## 🏗️ Build
 
 ```bash
-# Build de producción
+# Production build
 npm run build
 
-# Preview del build
+# Preview build
 npm run preview
 ```
 
 ## 📱 PWA
 
-La aplicación es una Progressive Web App completamente funcional:
+The application is a fully functional Progressive Web App:
 
-- ✅ Instalable en dispositivos móviles y desktop
-- ✅ Funciona offline con datos cacheados
-- ✅ Iconos personalizados para iOS y Android
-- ✅ Estrategias de caché optimizadas
+- ✅ Installable on mobile and desktop devices
+- ✅ Works offline with cached data
+- ✅ Custom icons for iOS and Android
+- ✅ Optimized caching strategies
 
-## 🎨 Características de Diseño
+## 🎨 Design Features
 
-- **Tipografía**: Montserrat para una apariencia moderna
-- **Paleta de Colores**: Purple (#7C3AED) como color primario
-- **Animaciones**: Transiciones suaves con Framer Motion
-- **Glassmorphism**: Efectos de vidrio esmerilado
-- **Skeleton Loaders**: Animación shimmer personalizada
+- **Typography**: Montserrat for a modern look
+- **Color Palette**: Purple (#7C3AED) as primary color
+- **Animations**: Smooth transitions with Framer Motion
+- **Glassmorphism**: Frosted glass effects
+- **Skeleton Loaders**: Custom shimmer animation
 
 ## 🔄 CI/CD Pipeline
 
-Cada push a `main` ejecuta automáticamente:
+Every push to `main` automatically triggers:
 
-1. **Tests**: Todos los tests unitarios
-2. **Lint**: Validación de código con ESLint
-3. **Build**: Compilación de producción
-4. **Coverage**: Reporte de cobertura de tests
+1. **Tests**: All unit tests
+2. **Lint**: Code validation with ESLint
+3. **Build**: Production compilation
+4. **Coverage**: Test coverage report
 
-## 📊 Estructura del Proyecto
+## 📊 Project Structure
 
 ```
 ticketmaster-events/
@@ -142,43 +142,43 @@ ticketmaster-events/
 │   ├── pwa-192x192.png     # PWA icons
 │   └── pwa-512x512.png
 ├── src/
-│   ├── components/         # Componentes reutilizables
+│   ├── components/         # Reusable components
 │   ├── hooks/             # Custom hooks
-│   ├── routes/            # Configuración de rutas
+│   ├── routes/            # Route configuration
 │   ├── state/             # Zustand stores
 │   ├── test/              # Testing utilities
 │   ├── types/             # TypeScript types
-│   └── views/             # Páginas principales
-├── vitest.config.ts       # Configuración de Vitest
-└── vite.config.js         # Configuración de Vite + PWA
+│   └── views/             # Main pages
+├── vitest.config.ts       # Vitest configuration
+└── vite.config.js         # Vite + PWA configuration
 ```
 
-## 🤝 Contribuir
+## 🤝 Contributing
 
-Las contribuciones son bienvenidas. Por favor:
+Contributions are welcome. Please:
 
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📝 Licencia
+## 📝 License
 
-Este proyecto está bajo la Licencia MIT.
+This project is licensed under the MIT License.
 
-## 👤 Autor
+## 👤 Author
 
 **Brayan ML**
 
 - GitHub: [@BrayanML26](https://github.com/BrayanML26)
 
-## 🙏 Agradecimientos
+## 🙏 Acknowledgements
 
-- [Ticketmaster API](https://developer.ticketmaster.com/) por proporcionar los datos de eventos
-- [Lucide Icons](https://lucide.dev/) por los iconos
-- [Google Fonts](https://fonts.google.com/) por la tipografía Montserrat
+- [Ticketmaster API](https://developer.ticketmaster.com/) for providing event data
+- [Lucide Icons](https://lucide.dev/) for icons
+- [Google Fonts](https://fonts.google.com/) for Montserrat typography
 
 ---
 
-⭐️ Si te gusta este proyecto, dale una estrella en GitHub!
+⭐️ If you like this project, give it a star on GitHub!

@@ -7,11 +7,11 @@ import { startOfDay, endOfDay, endOfWeek, format } from 'date-fns';
 
 
 const CATEGORIES = [
-    { label: 'Categorías', value: '' },
-    { label: 'Música', value: 'Music' },
-    { label: 'Deportes', value: 'Sports' },
-    { label: 'Teatro', value: 'Arts & Theatre' },
-    { label: 'Familia', value: 'Family' },
+    { label: 'Categories', value: '' },
+    { label: 'Music', value: 'Music' },
+    { label: 'Sports', value: 'Sports' },
+    { label: 'Arts & Theatre', value: 'Arts & Theatre' },
+    { label: 'Family', value: 'Family' },
 ];
 
 const Home = () => {
@@ -76,13 +76,13 @@ const Home = () => {
                 <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 animate-fade-in-up">
                     <div className="space-y-4">
                         <span className="inline-block py-1.5 px-4 rounded-full bg-[#7C3AED]/20 backdrop-blur-md border border-[#7C3AED]/40 text-white text-[11px] font-black tracking-widest uppercase mb-2">
-                            DESCUBRE TU CIUDAD
+                            DISCOVER YOUR CITY
                         </span>
                         <h1 className="text-5xl md:text-7xl font-black tracking-tight text-white drop-shadow-2xl max-w-4xl mx-auto leading-[1.1]">
-                            Vive momentos inolvidables.
+                            Experience unforgettable moments.
                         </h1>
                         <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-medium opacity-90">
-                            Explora los mejores conciertos, festivales, teatro y deportes cerca de ti.
+                            Explore the best concerts, festivals, theatre, and sports events near you.
                         </p>
                     </div>
 
@@ -100,7 +100,7 @@ const Home = () => {
                                     ref={searchInputRef}
                                     defaultValue={searchTerm}
                                     className="block w-full pl-12 pr-4 py-4 md:py-3 bg-transparent text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none text-sm font-medium"
-                                    placeholder="Buscar artista, evento o lugar"
+                                    placeholder="Search artist, event or venue"
                                     type="text"
                                 />
                             </div>
@@ -133,8 +133,8 @@ const Home = () => {
                                     <span className="material-icons text-gray-400">location_on</span>
                                 </div>
                                 <select className="block w-full pl-11 pr-10 py-4 md:py-3 bg-transparent text-gray-900 dark:text-white focus:outline-none text-sm font-medium appearance-none cursor-pointer">
-                                    <option className="text-gray-900">Ubicación</option>
-                                    <option className="text-gray-900">Ciudad de México</option>
+                                    <option className="text-gray-900">Location</option>
+                                    <option className="text-gray-900">Mexico City</option>
                                     <option className="text-gray-900">Guadalajara</option>
                                     <option className="text-gray-900">Monterrey</option>
                                 </select>
@@ -145,7 +145,7 @@ const Home = () => {
 
                             <div className="w-full md:w-auto p-1">
                                 <button type="submit" className="w-full md:w-auto btn-primary !rounded-xl md:!rounded-full px-10">
-                                    Explorar
+                                    Explore
                                 </button>
                             </div>
                         </form>
@@ -157,27 +157,27 @@ const Home = () => {
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
                 <div className="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-gray-100 dark:border-gray-800 pb-6">
                     <div className="space-y-1">
-                        <h2 className="text-3xl font-black text-gray-900 dark:text-white tracking-tight">Eventos Destacados</h2>
-                        <p className="text-gray-500 font-medium">No te pierdas los eventos más populares de esta temporada.</p>
+                        <h2 className="text-3xl font-black text-gray-900 dark:text-white tracking-tight">Featured Events</h2>
+                        <p className="text-gray-500 font-medium">Don't miss the most popular events of this season.</p>
                     </div>
                     <div className="flex items-center space-x-2 bg-gray-50 dark:bg-gray-800/50 p-1 rounded-xl border border-gray-100 dark:border-gray-800">
                         <button
                             onClick={() => setDateFilter('today')}
                             className={`px-5 py-2 text-sm font-bold transition-colors rounded-lg ${dateFilter === 'today' ? 'bg-primary text-white shadow-md' : 'text-gray-500 hover:text-gray-900 dark:hover:text-white'}`}
                         >
-                            Hoy
+                            Today
                         </button>
                         <button
                             onClick={() => setDateFilter('week')}
                             className={`px-5 py-2 text-sm font-bold transition-colors rounded-lg ${dateFilter === 'week' ? 'bg-primary text-white shadow-md' : 'text-gray-500 hover:text-gray-900 dark:hover:text-white'}`}
                         >
-                            Esta Semana
+                            This Week
                         </button>
                         <button
                             onClick={() => setDateFilter('all')}
                             className={`px-5 py-2 text-sm font-bold transition-colors rounded-lg ${dateFilter === 'all' ? 'bg-primary text-white shadow-md' : 'text-gray-500 hover:text-gray-900 dark:hover:text-white'}`}
                         >
-                            Ver Todos
+                            View All
                         </button>
                     </div>
                 </div>
@@ -190,8 +190,8 @@ const Home = () => {
                     </div>
                 ) : isError ? (
                     <div className="text-center py-32 space-y-4">
-                        <p className="text-gray-400 font-medium">No pudimos conectar con la base de datos.</p>
-                        <button onClick={() => window.location.reload()} className="btn-primary mx-auto">Reintentar</button>
+                        <p className="text-gray-400 font-medium">Could not connect to the database.</p>
+                        <button onClick={() => window.location.reload()} className="btn-primary mx-auto">Retry</button>
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -213,7 +213,7 @@ const Home = () => {
                             disabled={isFetchingNextPage}
                             className="inline-flex items-center px-10 py-3.5 bg-white dark:bg-card-dark border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white font-black rounded-xl shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 disabled:opacity-50"
                         >
-                            {isFetchingNextPage ? 'Cargando...' : 'Cargar más eventos'}
+                            {isFetchingNextPage ? 'Loading...' : 'Load more events'}
                         </button>
                     </div>
                 )}
