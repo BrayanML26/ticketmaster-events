@@ -52,6 +52,7 @@ export const EventCard: React.FC<EventCardProps> = ({ event, isLiked, onToggleLi
                         e.stopPropagation();
                         onToggleLike(event.id);
                     }}
+                    aria-label="Toggle favorite"
                     className="absolute bottom-4 right-4 p-2.5 bg-white/10 hover:bg-white/30 backdrop-blur-md rounded-full text-white transition-all transform active:scale-90 border border-white/20 opacity-0 group-hover:opacity-100"
                 >
                     <Heart
