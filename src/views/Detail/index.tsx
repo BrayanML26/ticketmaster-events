@@ -107,9 +107,14 @@ const Detail = () => {
                                 </div>
                             </div>
 
-                            <button className="w-full btn-primary !py-5 !text-base shadow-xl shadow-primary/30">
+                            <a
+                                href={event.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block w-full text-center btn-primary !py-5 !text-base shadow-xl shadow-primary/30"
+                            >
                                 Book Tickets
-                            </button>
+                            </a>
 
                             <div className="space-y-4 pt-6 border-t border-gray-200 dark:border-gray-700">
                                 <div className="flex items-center gap-3">
