@@ -102,6 +102,7 @@ const Home = () => {
                                     className="block w-full pl-12 pr-4 py-4 md:py-3 bg-transparent text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none text-sm font-medium"
                                     placeholder="Search artist, event or venue"
                                     type="text"
+                                    aria-label="Search events"
                                 />
                             </div>
 
@@ -116,6 +117,7 @@ const Home = () => {
                                     value={selectedCategory}
                                     onChange={(e) => setSelectedCategory(e.target.value)}
                                     className="block w-full pl-11 pr-10 py-4 md:py-3 bg-transparent text-gray-900 dark:text-white focus:outline-none text-sm font-medium appearance-none cursor-pointer"
+                                    aria-label="Select category"
                                 >
                                     {CATEGORIES.map((cat) => (
                                         <option key={cat.value} className="text-gray-900" value={cat.value}>{cat.label}</option>
@@ -132,7 +134,10 @@ const Home = () => {
                                 <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
                                     <span className="material-icons text-gray-400">location_on</span>
                                 </div>
-                                <select className="block w-full pl-11 pr-10 py-4 md:py-3 bg-transparent text-gray-900 dark:text-white focus:outline-none text-sm font-medium appearance-none cursor-pointer">
+                                <select
+                                    className="block w-full pl-11 pr-10 py-4 md:py-3 bg-transparent text-gray-900 dark:text-white focus:outline-none text-sm font-medium appearance-none cursor-pointer"
+                                    aria-label="Select location"
+                                >
                                     <option className="text-gray-900">Location</option>
                                     <option className="text-gray-900">Mexico City</option>
                                     <option className="text-gray-900">Guadalajara</option>

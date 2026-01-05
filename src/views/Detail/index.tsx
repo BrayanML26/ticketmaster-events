@@ -65,6 +65,7 @@ const Detail = () => {
                             <button
                                 onClick={() => toggleFavorite(event.id)}
                                 className="absolute top-6 right-6 p-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 text-white hover:bg-white/20 transition-all"
+                                aria-label="Toggle favorite"
                             >
                                 <Heart fill={isLiked ? "#ef4444" : "none"} color={isLiked ? "#ef4444" : "white"} />
                             </button>

@@ -114,6 +114,7 @@ const Favorites = () => {
                                             toggleFavorite(event.id);
                                         }}
                                         className="p-5 bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-sm border border-transparent text-red-500 hover:bg-red-50 hover:border-red-100 dark:hover:bg-red-900/10 transition-all group/btn"
+                                        aria-label="Remove from favorites"
                                     >
                                         <Heart className="w-6 h-6 fill-current group-hover/btn:scale-110 transition-transform" />
                                     </button>

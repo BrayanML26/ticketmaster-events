@@ -46,6 +46,7 @@ export const Navbar = () => {
                         <button
                             onClick={toggleDarkMode}
                             className="p-3 rounded-2xl bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all border border-gray-100 dark:border-gray-700 group"
+                            aria-label="Toggle dark mode"
                         >
                             <span className="material-icons text-gray-500 dark:text-gray-400 group-hover:text-primary transition-colors">brightness_4</span>
                         </button>
@@ -54,6 +55,7 @@ export const Navbar = () => {
                         <button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             className="md:hidden p-3 rounded-2xl bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all border border-gray-100 dark:border-gray-700"
+                            aria-label="Toggle mobile menu"
                         >
                             {mobileMenuOpen ? (
                                 <X className="w-5 h-5 text-gray-500 dark:text-gray-400" />
